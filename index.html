@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Text</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="./images/logo.png" draggable="false" class="logo" />
+      <ul id="menu_links">
+        <li>Home</li>
+        <li>Services</li>
+        <li>Projects</li>
+        <li>About us</li>
+      </ul>
+      <button class="nav_btn">
+        Get Started <img src="./images/arrow-white.png" draggable="false" />
+      </button>
+      <img
+        src="./images/menu.png"
+        draggable="false"
+        class="menu_icon"
+        onclick="toogleMenu()"
+      />
+    </nav>
+    <div class="header">
+      <div class="header_content">
+        <h1><span>FREE</span><br /><span>LANCER</span></h1>
+        <div class="btn_container">
+          <button>
+            Request Call Back <img src="./images/phone.png" draggable="false" />
+          </button>
+          <button>
+            Know More <img src="./images/arrow-black.png" draggable="false" />
+          </button>
+          <p>Passionate UI/UX designers with 10+ years of experience.</p>
+        </div>
+
+        
+      </div>
+      <img src="./images/girl.png" draggable="false" class="user_img" />
+    </div>
+
+    <script>
+      let navBar = document.querySelector("nav");
+      let menuLinks = document.getElementById("menu_links");
+
+      function toogleMenu() {
+        menuLinks.classList.toggle("show_menu");
+      }
+
+      window.onscroll = function () {
+        if (window.scrollY > 0) {
+          navBar.style.background = "#eefff9";
+          navBar.style.boxShadow = "4px 4px 10px rgba(0, 0, 0, 0.2)";
+          navBar.style.borderBottom = "none";
+        } else {
+          navBar.style.background = "transparent";
+          navBar.style.borderBottom = "block";
+          navBar.style.boxShadow = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
